@@ -13,6 +13,10 @@ class Equipment(models.Model):
     disk = models.CharField("Disco", max_length=50)
     type = models.CharField("Tipo", max_length=50)
     
+    def __str__(self):
+        return "Referencia: {} Marca: {} Procesador: {} Memoria: {} Disco:  {} Tipo: {}".format(
+            self.reference, self.brand, self.processor, self.memory, self.disk, self.type)
+    
     class Meta:	
         verbose_name = 'Equipo'
         verbose_name_plural = 'Equipos'
