@@ -28,8 +28,8 @@ class UserEquipment(models.Model):
     """
     date_assignment = models.DateTimeField("Fecha de asignación", max_length=50)
     date_delivery  = models.DateTimeField("Fecha de entrega", max_length=50)
-    user =  models.ForeignKey(User, on_delete=models.CASCADE)
-    equipment =  models.ForeignKey(Equipment, on_delete=models.CASCADE)
+    user =  models.ForeignKey(User, on_delete=models.CASCADE, verbose_name = 'Usuario')
+    equipment =  models.ForeignKey(Equipment, on_delete=models.CASCADE, verbose_name = 'Equipo')
     
     class Meta:
         verbose_name = 'Equipo asignado a usuario'
